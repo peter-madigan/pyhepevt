@@ -28,12 +28,12 @@ parent ``HepEvtEvent``.
 Below I provide a short example of how to open a file, modify an attribute and then save the
 data to a new file ::
 
-    from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
-    with HepEvtReaderMARLEY(<input file>) as reader:
-    	 with HepEvtWriterEDepSim(<output file>, 'w') as writer:
-	     for event in reader:
-	     	 event.p = [0, 0, 0, event.m[-1]] # force the particle momentum to zero
-		 writer.write(event)
+     from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
+     with HepEvtReaderMARLEY(<input file>) as reader:
+     	  with HepEvtWriterEDepSim(<output file>, 'w') as writer:
+	       for event in reader:
+	       	   event.p = [0, 0, 0, event.m[-1]] # force the particle momentum to zero
+		   writer.write(event)
 
 extending
 ---------
