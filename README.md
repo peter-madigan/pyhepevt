@@ -12,7 +12,7 @@ usage
 Conversion scripts between HepEvt formats are provided within `scripts/`. These can be used
 to convert HepEvt records of one type to another, e.g. ::
 
-   python scripts/convert_marley_to_edepsim.py <MARLEY HepEvt file> <EDepSim HepEvt file>
+    python scripts/convert_marley_to_edepsim.py <MARLEY HepEvt file> <EDepSim HepEvt file>
 
 Within python, file parsing is broken into reading a file (``HepEvtReader``) and writing
 a file (``HepEvtWriter``). Sub-classes are provided for each file format that can be parsed
