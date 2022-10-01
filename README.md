@@ -7,7 +7,7 @@ records using python. To install ::
     pip install .
 
 usage
-=====
+-----
 
 Conversion scripts between HepEvt formats are provided within `scripts/`. These can be used
 to convert HepEvt records of one type to another, e.g. ::
@@ -37,7 +37,7 @@ data to a new file ::
 	        writer.write(event)
 
 extending
-=========
+---------
 
 To add read compatibility with a new HepEvt format, one needs to:
 
