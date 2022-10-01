@@ -33,7 +33,7 @@ data to a new file ::
     with HepEvtReaderMARLEY(<input file>) as reader:
         with HepEvtWriterEDepSim(<output file>, 'w'): as writer:
        	    for event in reader:
-	        event.phep = [0, 0, 0,] + [event.phep[-1]]*2 # force the particle momentum to zero
+	        event.p = [0, 0, 0, event.m[-1]] # force the particle momentum to zero
 	        writer.write(event)
 
 extending
