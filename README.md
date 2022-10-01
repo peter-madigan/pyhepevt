@@ -29,7 +29,7 @@ Below I provide a short example of how to open a file, modify an attribute and t
 data to a new file ::
 
     from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
-
+    
     with HepEvtReaderMARLEY(<input file>) as reader:
         with HepEvtWriterEDepSim(<output file>, 'w'): as writer:
        	    for event in reader:
