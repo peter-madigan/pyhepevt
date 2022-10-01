@@ -29,12 +29,11 @@ Below I provide a short example of how to open a file, modify an attribute and t
 data to a new file ::
 
     from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
-    
     with HepEvtReaderMARLEY(<input file>) as reader:
-        with HepEvtWriterEDepSim(<output file>, 'w') as writer:
-       	    for event in reader:
-	    	event.p = [0, 0, 0, event.m[-1]] # force the particle momentum to zero
-		writer.write(event)
+    	 with HepEvtWriterEDepSim(<output file>, 'w') as writer:
+	     for event in reader:
+	     	 event.p = [0, 0, 0, event.m[-1]] # force the particle momentum to zero
+		 writer.write(event)
 
 extending
 ---------
