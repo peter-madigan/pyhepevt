@@ -1,6 +1,6 @@
 from pyhepevt import HepEvtWriterMARLEY, HepEvtReaderMARLEY, HepEvtWriterEDepSim
 
-marley_test_file = 'test/test_marley.hepevt'
+marley_test_file = 'test/test.marley.hepevt'
 
 def test_write_marley():
     with HepEvtReaderMARLEY(marley_test_file) as reader:

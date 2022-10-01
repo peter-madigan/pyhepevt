@@ -27,6 +27,10 @@ class HepEvtParticle(object):
     def dump_marley(self):
         return f'{self.isthep} {self.idhep} {self.jmohep1} {self.jmohep2} {self.jdahep1} {self.jdahep2} {self.phep1} {self.phep2} {self.phep3} {self.phep4} {self.phep5} {self.vhep1} {self.vhep2} {self.vhep3} {self.vhep4}'
 
+    @staticmethod
+    def from_edepsim(*args):
+        return HepEvtParticle(*args[:4], 0, 0, *args[4:], 0, 0, 0, 0, 0)
+    
     def dump_edepsim(self):
         return f'{self.isthep} {self.idhep} {self.jmohep1} {self.jmohep2} {self.phep1} {self.phep2} {self.phep3} {self.phep4}'
 
