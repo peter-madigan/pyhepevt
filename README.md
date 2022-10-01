@@ -2,15 +2,15 @@ pyhepevt
 --------
 
 This is a lightweight python library to facilitate conversion and manipulation of HepEvt
-records using python. To install::
+records using python. To install ::
 
-	pip install .
+    pip install .
 
 usage
 =====
 
 Conversion scripts between HepEvt formats are provided within `scripts/`. These can be used
-to convert HepEvt records of one type to another, e.g.::
+to convert HepEvt records of one type to another, e.g. ::
 
    python scripts/convert_marley_to_edepsim.py <MARLEY HepEvt file> <EDepSim HepEvt file>
 
@@ -26,15 +26,15 @@ Similarly, a ``HepEvtParticle`` has an ``event`` attribute that stores a referen
 parent ``HepEvtEvent``.
 
 Below I provide a short example of how to open a file, modify an attribute and then save the
-data to a new file::
+data to a new file ::
 
-     from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
+    from pyhepevt import HepEvtReaderMARLEY, HepEvtWriterEDepSim
 
-     with HepEvtReaderMARLEY(<input file>) as reader:
-       with HepEvtWriterEDepSim(<output file>, 'w'): as writer:
+    with HepEvtReaderMARLEY(<input file>) as reader:
+        with HepEvtWriterEDepSim(<output file>, 'w'): as writer:
        	    for event in reader:
-	    	event.phep = [0, 0, 0,] + [event.phep[-1]]*2 # force the particle momentum to zero
-		writer.write(event)
+	        event.phep = [0, 0, 0,] + [event.phep[-1]]*2 # force the particle momentum to zero
+	        writer.write(event)
 
 extending
 =========
