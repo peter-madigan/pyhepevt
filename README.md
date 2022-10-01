@@ -48,7 +48,7 @@ To add read compatibility with a new HepEvt format, one needs to:
 
 To add write compatibility with a new HepEvt format, one needs to:
 
- 1. implement the ``dump_<package>(*args)`` method of the ``HepEvtEvent`` and ``HepEvtParticle``
+ 1. implement the ``dump_<package>()`` method of the ``HepEvtEvent`` and ``HepEvtParticle``
 
  2. create a new ``HepEvtWriter<SoftwarePackage>`` class inheriting from ``HepEvtWriter``
 
